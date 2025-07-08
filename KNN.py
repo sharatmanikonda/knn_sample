@@ -72,7 +72,7 @@ pd.crosstab(y_test, y_pred, rownames = ['Actual'], colnames = ['Predictions'])
 acc = []
 
 # Verify the model for a range of 'k' values
-for i in range(1, 50, 2):
+for i in range(1, 100, 2):
     neigh = KNeighborsClassifier(n_neighbors=i)
     neigh.fit(X_train, y_train)
     train_acc = np.mean(neigh.predict(X_train) == y_train)
@@ -85,9 +85,9 @@ acc
 
 # Plotting the training and test accuracies for different values of k
 # Red circles - training accuracies
-plt.plot(np.arange(1, 50, 2), [i[2] for i in acc], "ro-")
+plt.plot(np.arange(1, 100, 2), [i[2] for i in acc], "ro-")
 # Blue circles - test accuracies
-plt.plot(np.arange(1, 50, 2), [i[3] for i in acc], "bo-")
+plt.plot(np.arange(1, 100, 2), [i[3] for i in acc], "bo-")
 
 
 # Best Model
