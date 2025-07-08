@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import pickle
 
 # Load the dataset
-file_path = r"D:\Instilit\Trainings\material_PPTs\DS\13.KNN\Chronic_Kidney_Disease_data.csv"
+file_path = r"Chronic_Kidney_Disease_data.csv"
 data = pd.read_csv(file_path)
 
 # Drop non-predictive columns
